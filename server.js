@@ -4,6 +4,9 @@ const connectDb = require("./config/db");
 
 const PORT = process.env.PORT || 5000;
 connectDb();
+
+app.use(express.json({extended:false}));
+
 app.get("/",(req , res)=>{
     
     res.send("API RUnning ======>>");
